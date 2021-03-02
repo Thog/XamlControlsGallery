@@ -17,9 +17,13 @@ namespace XamlControlsGallery
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .With(new SkiaOptions{ MaxGpuResourceSizeBytes = 8096000})
-                .With(new Win32PlatformOptions{ AllowEglInitialization = true })
-                .LogToDebug()
+                .With(new Win32PlatformOptions
+                {
+                    UseWgl = true,
+                    EnableMultitouch = true
+                })
+                .UseSkia()
+                .LogToTrace()
                 .UseReactiveUI();
     }
 }
