@@ -25,9 +25,6 @@
     </DockPanel>
 
     <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 40 0 20">
-      <TabItem Header="Media">
-        <pages:MediaPage />
-      </TabItem>
       <TabItem Header="Overview">
         <pages:OverviewPage />
       </TabItem>
